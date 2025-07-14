@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/270823155224265531/65aa5c3d82f9405aa58e5d647abe23c4/artifacts
+end_time: 1752528714968
+entry_point_name: ''
+experiment_id: '270823155224265531'
+lifecycle_stage: active
+run_id: 65aa5c3d82f9405aa58e5d647abe23c4
+run_name: LinearRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752528711887
+status: 3
+tags: []
+user_id: elvisiraguha

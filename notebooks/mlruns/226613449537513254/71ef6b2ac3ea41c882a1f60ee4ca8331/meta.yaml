@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/elvisiraguha/Documents/projects/student-performance-mlops/notebooks/mlruns/226613449537513254/71ef6b2ac3ea41c882a1f60ee4ca8331/artifacts
+end_time: 1752526875260
+entry_point_name: ''
+experiment_id: '226613449537513254'
+lifecycle_stage: active
+run_id: 71ef6b2ac3ea41c882a1f60ee4ca8331
+run_name: RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752526873726
+status: 3
+tags: []
+user_id: elvisiraguha

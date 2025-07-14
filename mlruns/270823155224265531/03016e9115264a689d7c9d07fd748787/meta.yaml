@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/270823155224265531/03016e9115264a689d7c9d07fd748787/artifacts
+end_time: 1752528716790
+entry_point_name: ''
+experiment_id: '270823155224265531'
+lifecycle_stage: active
+run_id: 03016e9115264a689d7c9d07fd748787
+run_name: DecisionTree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752528714979
+status: 3
+tags: []
+user_id: elvisiraguha

@@ -1,0 +1,10 @@
+artifact_location: file:///Users/elvisiraguha/Documents/projects/student-performance-mlops/notebooks/mlruns/226613449537513254/models/m-6736e1f3defb4dbfa5ee00a8194f17ec/artifacts
+creation_timestamp: 1752526869658
+experiment_id: '226613449537513254'
+last_updated_timestamp: 1752526872243
+model_id: m-6736e1f3defb4dbfa5ee00a8194f17ec
+model_type: null
+name: model
+source_run_id: d80c8f6c074844619037bbefd5300caa
+status: 2
+status_message: null

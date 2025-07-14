@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/270823155224265531
+creation_time: 1752528711879
+experiment_id: '270823155224265531'
+last_update_time: 1752528711879
+lifecycle_stage: active
+name: student-performance-regression

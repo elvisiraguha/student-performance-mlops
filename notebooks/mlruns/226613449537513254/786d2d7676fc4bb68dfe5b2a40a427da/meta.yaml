@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/elvisiraguha/Documents/projects/student-performance-mlops/notebooks/mlruns/226613449537513254/786d2d7676fc4bb68dfe5b2a40a427da/artifacts
+end_time: 1752526790714
+entry_point_name: ''
+experiment_id: '226613449537513254'
+lifecycle_stage: active
+run_id: 786d2d7676fc4bb68dfe5b2a40a427da
+run_name: LinearRegression
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752526790670
+status: 4
+tags: []
+user_id: elvisiraguha

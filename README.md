@@ -24,20 +24,23 @@ Data source: [UCI Student Performance Data Set](https://archive.ics.uci.edu/ml/d
 
 ├── data/ # Raw and processed data
 
-├── notebooks/ # EDA and experimentation
+├── notebooks/ # EDA, experimentation and training
 
-├── training/ # Training pipeline
+  └── eda.ipynb # Exploratory Data Analysis
+
+  └── eda.py # Exploratory Data Analysis Script
+
+  └── preprocessing_and_modeling_with_mlflow.ipynb
+
+  └── preprocessing_and_modeling_with_mlflow.py
 
 ├── serving/ # Model serving with FastAPI
 
-├── monitoring/ # Monitoring with Prometheus & Grafana
-
-├── Dockerfile # Image for training and serving
+  └── main.py # FastAPI app for model inference
 
 ├── requirements.txt # Python dependencies
 
-└── README.md # Project overview
-
+├── README.md # Project overview
 
 ---
 
@@ -46,10 +49,6 @@ Data source: [UCI Student Performance Data Set](https://archive.ics.uci.edu/ml/d
 - **Experiment Tracking**: MLflow
 - **Model Training**: scikit-learn, pandas
 - **Model Serving**: FastAPI
-- **Orchestration**: Prefect / Airflow (optional)
-- **Containerization**: Docker
-- **Monitoring**: Prometheus, Grafana
-- **Deployment**: Docker Compose
 
 ---
 
@@ -57,8 +56,10 @@ Data source: [UCI Student Performance Data Set](https://archive.ics.uci.edu/ml/d
 
 ### Clone the repo
 
+Clone [https://github.com/elvisiraguha/student-performance-mlops](https://github.com/elvisiraguha/student-performance-mlops)
+
 ```
-git clone [https://github.com/<your-username>/student-performance-mlops](https://github.com/elvisiraguha/student-performance-mlops).git
+git clone https://github.com/elvisiraguha/student-performance-mlops.git
 cd student-performance-mlops
 ```
 
@@ -73,9 +74,26 @@ pip install -r requirements.txt
 ### Run training
 
 ```
-python training/train.py
+python notebooks/preprocessing_and_modeling_with_mlflow.py
 ```
 
+### 3. 🚀 Launch MLflow UI
+
+```
+mlflow ui
+```
+
+Visit: http://localhost:5000
+
+- View experiment runs
+
+- Compare metrics (MAE, RMSE, R²)
+
+- Manage registered models (Staging/Production)
+
+
+## 🧠 Model Serving via FastAPI
+We serve the registered model using FastAPI + MLflow model loading.
 ### Run the API server
 
 ```
@@ -85,41 +103,41 @@ uvicorn serving.main:app --reload
 ## 📈 Sample Prediction Request
 
 ```
-curl -X POST "http://localhost:8000/predict" \
-     -H "Content-Type: application/json" \
-     -d '{
-           "school": "GP",
-           "sex": "F",
-           "age": 17,
-           "address": "U",
-           "famsize": "GT3",
-           ...
-           "G1": 14,
-           "G2": 15
-         }'
+curl -X POST http://localhost:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+        "school": "GP", "sex": "F", "age": 17, "address": "U", "famsize": "GT3",
+        "Pstatus": "T", "Medu": 4, "Fedu": 4, "Mjob": "teacher", "Fjob": "services",
+        "reason": "course", "guardian": "mother", "traveltime": 1, "studytime": 2,
+        "failures": 0, "schoolsup": 0, "famsup": 1, "paid": 0, "activities": 1,
+        "nursery": 1, "higher": 1, "internet": 1, "romantic": 0, "famrel": 5,
+        "freetime": 3, "goout": 3, "Dalc": 1, "Walc": 2, "health": 5, "absences": 3,
+        "G1": 14, "G2": 15
+      }'
+
 ```
 
-## 📉 Evaluation
+## ✅ Features Completed
+- Data cleaning and preprocessing
 
-Model performance is tracked using:
+- EDA and feature exploration
 
-- MAE / RMSE scores
+- Model training and evaluation
 
-- MLflow for experiment comparison
+- MLflow experiment logging
 
-- Monitoring with Prometheus and Grafana dashboards
+- Model registration to Model Registry
 
-## 🧠 Key MLOps Concepts Covered
+- Model serving via FastAPI
 
-- Data versioning
+## 📦 Next Steps
+- Dockerize training and serving
 
-- Experiment tracking
+- CI/CD for model updates
 
-- Containerized training and inference
+- Monitoring with Prometheus + Grafana
 
-- API-based model serving
-
-- Continuous monitoring
+- Deploy to cloud (e.g., GCP, AWS, or Azure)
 
 ## 🧑‍💻 Author
 Elvis Iraguha – @elvisiraguha

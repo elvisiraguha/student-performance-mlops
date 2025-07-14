@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/270823155224265531/136ab25da4984b32b20fc2a748525e71/artifacts
+end_time: 1752528718418
+entry_point_name: ''
+experiment_id: '270823155224265531'
+lifecycle_stage: active
+run_id: 136ab25da4984b32b20fc2a748525e71
+run_name: RandomForest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752528716798
+status: 3
+tags: []
+user_id: elvisiraguha
